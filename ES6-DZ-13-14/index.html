@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+ <html>
+ <head>
+  <meta charset=utf-8>
+  <title>Домашнее задание Java Script №21-22</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/lodash.js"></script>
+  </head>
+ <body>
+ 
+     <script type="text/template" id="shablon">
+
+	     <div class="questions">
+  
+	         <h1 class="main_title"><%= titleH1 %></h1>
+	         <h2 class="point_title"><%= question1 %></h2>
+	         <ul class="point">
+	             <% for (var i=0; i<answerO1.length; i++) {%>
+                     <li>
+			             <label>
+		                     <input type="radio" class="inputAnswer" name="q1"><span><%= answerO1[i] %></span></input>
+		                 </label>					 
+					 </li>
+	             <%};%>		 
+	         </ul>
+			 
+	         <h2 class="point_title"><%= question2 %></h2>
+	         <ul class="point">
+	             <% for (var i=0; i<answerO2.length; i++) {%>
+                     <li>
+			             <label>
+		                     <input type="radio" class="inputAnswer" name="q2"><span><%= answerO2[i] %></span></input>
+		                 </label>					 
+					 </li>
+	             <%};%>		 
+	         </ul>			 
+
+	         <h2 class="point_title"><%= question3 %></h2>
+	         <ul class="point">
+	             <% for (var i=0; i<answerO3.length; i++) {%>
+                     <li>
+			             <label>
+		                     <input type="radio" class="inputAnswer" name="q3"><span><%= answerO3[i] %></span></input>
+		                 </label>					 
+					 </li>
+	             <%};%>		 
+	         </ul>
+			 <input type="submit" class="submit_class" value="Проверить результаты">
+			 
+         </div>
+
+     </script>
+
+	 <div class="overlay"></div>
+     <div class="alert_true">
+	     <h2></h2>
+		 <h2></h2>
+		 <button class="button_ok">OK</button>
+	 </div>	 
+
+   <script src="js/es6.script.js"></script>
+ </body>
+ </html>
